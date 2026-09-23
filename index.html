@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>FundConnect</h2>
+
+    <div>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('campaigns')">Campaigns</button>
+        <button onclick="showPage('login')">Login</button>
+        <button onclick="showPage('signup')">Signup</button>
+    </div>
+</nav>
+
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <div class="hero">
+        <h1>Support a Cause. Create an Impact.</h1>
+        <p>
+            FundConnect is a crowdfunding platform where people can
+            create campaigns and support meaningful causes.
+        </p>
+
+        <button class="main-btn" onclick="showPage('campaigns')">
+            Explore Campaigns
+        </button>
+    </div>
+
+    <h2 class="section-title">Why Crowdfunding?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h3>💡 Create</h3>
+            <p>Create your own fundraising campaign.</p>
+        </div>
+
+        <div class="feature">
+            <h3>❤️ Support</h3>
+            <p>Support campaigns that matter to you.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🌍 Impact</h3>
+            <p>Make a positive impact through contributions.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- SIGNUP -->
+<section id="signup" class="page">
+    <div class="form-box">
+        <h2>Create Account</h2>
+
+        <input type="text" id="signupName" placeholder="Full Name">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Password">
+
+        <select id="signupRole">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button onclick="signup()">Signup</button>
+
+        <p>
+            Already have an account?
+            <span onclick="showPage('login')">Login</span>
+        </p>
+    </div>
+</section>
+
+
+<!-- LOGIN -->
+<section id="login" class="page">
+    <div class="form-box">
+        <h2>Login</h2>
+
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p>
+            Don't have an account?
+            <span onclick="showPage('signup')">Signup</span>
+        </p>
+    </div>
+</section>
+
+
+<!-- CAMPAIGNS -->
+<section id="campaigns" class="page">
+    <h2 class="section-title">Available Campaigns</h2>
+
+    <div id="campaignContainer" class="campaign-grid">
+        <!-- Campaigns will appear here -->
+    </div>
+</section>
+
+
+<!-- USER DASHBOARD -->
+<section id="userDashboard" class="page">
+
+    <h1>User Dashboard</h1>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>My Campaigns</h3>
+            <p id="myCampaignCount">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>My Donations</h3>
+            <p id="myDonationCount">0</p>
+        </div>
+
+    </div>
+
+    <div class="dashboard-buttons">
+        <button onclick="showPage('createCampaign')">
+            Create Campaign
+        </button>
+
+        <button onclick="showPage('campaigns')">
+            Browse Campaigns
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+    </div>
+
+</section>
+
+
+<!-- CREATE CAMPAIGN -->
+<section id="createCampaign" class="page">
+
+    <div class="form-box">
+
+        <h2>Create Campaign</h2>
+
+        <input type="text"
+               id="campaignTitle"
+               placeholder="Campaign Title">
+
+        <textarea
+            id="campaignDescription"
+            placeholder="Campaign Description"></textarea>
+
+        <input type="number"
+               id="campaignTarget"
+               placeholder="Target Amount">
+
+        <input type="date"
+               id="campaignDeadline">
+
+        <button onclick="createCampaign()">
+            Create Campaign
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ADMIN DASHBOARD -->
+<section id="adminDashboard" class="page">
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Total Campaigns</h3>
+            <p id="totalCampaigns">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Total Donations</h3>
+            <p id="totalDonations">₹0</p>
+        </div>
+
+    </div>
+
+    <h2>Manage Campaigns</h2>
+
+    <div id="adminCampaigns"></div>
+
+    <button onclick="logout()">Logout</button>
+
+</section>
+
+
+<footer>
+    <p>© 2026 FundConnect | Crowdfunding Platform</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
