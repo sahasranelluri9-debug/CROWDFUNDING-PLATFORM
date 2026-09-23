@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #222;
+}
+
+/* NAVBAR */
+
+nav {
+    background: #4b2aad;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    text-decoration: underline;
+}
+
+
+/* PAGE */
+
+.page {
+    display: none;
+    padding: 50px 7%;
+    min-height: 75vh;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #4b2aad;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.main-btn {
+    margin-top: 30px;
+    padding: 13px 25px;
+    background: #4b2aad;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* SECTION */
+
+.section-title {
+    text-align: center;
+    margin: 35px 0;
+    color: #4b2aad;
+}
+
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+    margin-bottom: 12px;
+}
+
+
+/* FORM */
+
+.form-box {
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #4b2aad;
+    margin-bottom: 25px;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-box textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #4b2aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-box p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-box span {
+    color: #4b2aad;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* CAMPAIGNS */
+
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.campaign-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.campaign-card h3 {
+    color: #4b2aad;
+    margin-bottom: 10px;
+}
+
+.campaign-card p {
+    margin: 8px 0;
+}
+
+.campaign-card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #4b2aad;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* DASHBOARD */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-card h3 {
+    color: #555;
+}
+
+.dashboard-card p {
+    font-size: 30px;
+    color: #4b2aad;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.dashboard-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.dashboard-buttons button,
+#adminDashboard > button {
+    padding: 12px 20px;
+    background: #4b2aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* ADMIN */
+
+#adminCampaigns {
+    margin: 25px 0;
+}
+
+.admin-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-item button {
+    padding: 8px 15px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .features,
+    .campaign-grid,
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-buttons {
+        flex-direction: column;
+    }
+}
